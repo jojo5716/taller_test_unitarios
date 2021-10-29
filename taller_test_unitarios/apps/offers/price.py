@@ -1,9 +1,10 @@
 import requests
 
+
 RANDOM_NUMBER_URL = 'https://csrng.net/csrng/csrng.php?min=1&max=100'
 
 def get_random_number():
-    response = requests.get(RANDOM_NUMBER_URL)
+    response = requests.get(RANDOM_NUMBER_URL) ## [{"random": 20}]
 
     return response.json()[0]['random']
 
